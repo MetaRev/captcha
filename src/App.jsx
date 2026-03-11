@@ -67,7 +67,7 @@ function App() {
           <div className="ml-auto flex flex-col items-center text-[9px] opacity-70 leading-tight">
 
             <img
-              src="src/assets/recaptcha-project-browser-transparent.png"
+              src="src/assets/file1.svg"
               className="w-10 h-10"
             />
 
