@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import GeoCaptchaGame from "./GeoCaptchaGame";
-import img from "./assets/file1.svg";;
+import logo from "./assets/file1.svg";;
 
 function App() {
   const [loading, setLoading] = useState(false);
