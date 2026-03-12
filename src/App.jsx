@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import GeoCaptchaGame from "./GeoCaptchaGame";
-import logo from "captcha\\public\\file1.svg";
+import img from "./assets/file1.svg";;
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -75,7 +75,7 @@ function App() {
           <p className="font-semibold">reCAPTCHA</p>
 
           <p>
-            <span className="hover:underline cursor-pointer">Privacy</span> -
+            <span className="hover:underline cursor-pointer">Privacy</span> 
             <span className="hover:underline cursor-pointer"> Terms</span>
           </p>
 
