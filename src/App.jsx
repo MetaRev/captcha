@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import GeoCaptchaGame from "./GeoCaptchaGame";
+import logo from "captcha\\public\\file1.svg";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -27,62 +28,61 @@ function App() {
 
       <div className="bg-white w-72 h-20 shadow-xl flex items-center px-5 border border-gray-300 z-0">
 
-          {/* Checkbox */}
-          <div
-            id="captchaBox"
-            onClick={!tick ? handleClick : undefined}
-            className={`w-8 h-8 rounded-sm cursor-pointer flex items-center justify-center transition
+        {/* Checkbox */}
+        <div
+          id="captchaBox"
+          onClick={!tick ? handleClick : undefined}
+          className={`w-8 h-8 rounded-sm cursor-pointer flex items-center justify-center transition
             ${loading || tick ? "" : "border-2 border-gray-400 hover:border-gray-600"}`}
-          >
+        >
 
-            {/* Spinner */}
-            {loading && (
-              <div className="w-6 h-6 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-            )}
+          {/* Spinner */}
+          {loading && (
+            <div className="w-6 h-6 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+          )}
 
-            {/* Animated Tick */}
-            {tick && !loading && (
-              <svg
-                viewBox="0 0 24 24"
-                className="w-7 h-7 text-green-500"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-              >
-                <path
-                  className="checkmark"
-                  d="M5 13l4 4L19 7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            )}
+          {/* Animated Tick */}
+          {tick && !loading && (
+            <svg
+              viewBox="0 0 24 24"
+              className="w-7 h-7 text-green-500"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+            >
+              <path
+                className="checkmark"
+                d="M5 13l4 4L19 7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
 
-          </div>
+        </div>
 
-          {/* Text */}
-          <p className="ml-3 text-base">I'm not a robot</p>
+        {/* Text */}
+        <p className="ml-3 text-base">I'm not a robot</p>
 
-          {/* Logo */}
-          <div className="ml-auto flex flex-col items-center text-[9px] opacity-70 leading-tight">
+        {/* Logo */}
+        <div className="ml-auto flex flex-col items-center text-[9px] opacity-70 leading-tight">
 
-            <img
-              src="src/assets/file1.svg"
-              className="w-10 h-10"
-            />
+          <img
+            src={logo}
+            className="w-10 h-10"
+          />
 
-            <p className="font-semibold">reCAPTCHA</p>
+          <p className="font-semibold">reCAPTCHA</p>
 
-            <p>
-              <span className="hover:underline cursor-pointer">Privacy</span> -
-              <span className="hover:underline cursor-pointer"> Terms</span>
-            </p>
+          <p>
+            <span className="hover:underline cursor-pointer">Privacy</span> -
+            <span className="hover:underline cursor-pointer"> Terms</span>
+          </p>
 
-          </div>
+        </div>
 
       </div>
 
-      {/* Geo CAPTCHA overlayed over the checkbox (no dark background) */}
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center z-10">
           <div className="bg-white w-[520px] h-[670px] shadow-md border border-[#D3D3D3] flex flex-col relative overflow-hidden">
@@ -120,7 +120,7 @@ function App() {
                   animationDelay: `${Math.random() * 1.5}s`,
                   backgroundColor:
                     ["#22c55e", "#3b82f6", "#f97316", "#e11d48", "#a855f7"][
-                      i % 5
+                    i % 5
                     ],
                 }}
               />
